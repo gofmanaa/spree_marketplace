@@ -40,7 +40,7 @@ RSpec.configure do |config|
   config.include Spree::TestingSupport::Preferences
   config.include Spree::TestingSupport::UrlHelpers
 
-  config.backtrace_clean_patterns = []
+  config.backtrace_exclusion_patterns = []
   config.color = true
   config.infer_spec_type_from_file_location!
   config.mock_with :rspec

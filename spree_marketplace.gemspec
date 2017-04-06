@@ -1,3 +1,6 @@
+lib = File.expand_path('../lib/', __FILE__)
+$LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
+
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
@@ -5,7 +8,7 @@ Gem::Specification.new do |s|
   s.version     = '2.0.0.beta'
   s.summary     = 'Enable Spree to work as a Marketplace.'
   s.description = 'By extending Spree Drop Ship to enable supplier payments Spree works as a Marketplace.'
-  s.required_ruby_version = '>= 2.0.0'
+  s.required_ruby_version = '>= 2.3.3'
 
   s.author    = 'Jeff Dutil'
   s.email     = 'jdutil@burlingtonwebapps.com'
@@ -17,18 +20,18 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'stripe'
-  s.add_dependency 'spree_core', '~> 2.3.0'
+  # s.add_dependency 'spree_core'
   s.add_dependency 'spree_drop_ship'
 
-  s.add_development_dependency 'capybara', '~> 2.2'
+  s.add_development_dependency 'capybara'
   s.add_development_dependency 'coffee-rails'
   s.add_development_dependency 'coveralls'
   s.add_development_dependency 'database_cleaner'
-  s.add_development_dependency 'factory_girl', '~> 4.2'
+  s.add_development_dependency 'factory_girl'
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'launchy'
-  s.add_development_dependency 'rspec-rails', '~> 2.99'
-  s.add_development_dependency 'sass-rails', '~> 4.0.2'
+  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'sass-rails'
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'shoulda-matchers'
   s.add_development_dependency 'spree_digital'
